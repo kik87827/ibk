@@ -44,7 +44,13 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li><button class="props_button">1. 매우만족</button></li>
+                                        <li><button class="props_button">2. 만족</button></li>
+                                        <li><button class="props_button">3. 보통</button></li>
+                                        <li><button class="props_button">4. 불만족</button></li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +65,13 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li><button class="props_button">1. 전담센터 예약과정</button></li>
+                                        <li><button class="props_button">2. 바우처 혜택</button></li>
+                                        <li><button class="props_button">3. 컨시어지서비스</button></li>
+                                        <li><button class="props_button">4. 기타</button></li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +84,13 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li><button class="props_button">1. 매우만족</button></li>
+                                        <li><button class="props_button">2. 만족</button></li>
+                                        <li><button class="props_button">3. 보통</button></li>
+                                        <li><button class="props_button">4. 불만족</button></li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +105,13 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li><button class="props_button">1. 매우만족</button></li>
+                                        <li><button class="props_button">2. 만족</button></li>
+                                        <li><button class="props_button">3. 보통</button></li>
+                                        <li><button class="props_button">4. 불만족</button></li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +124,13 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li><button class="props_button">1. 이용하지 않음</button></li>
+                                        <li><button class="props_button">2. (이용) 매우 만족</button></li>
+                                        <li><button class="props_button">3. (이용) 만족</button></li>
+                                        <li><button class="props_button">4. (이용) 불만족</button></li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +143,23 @@
                                     </p>
                                 </div>
                                 <div class="survey_form_row">
-                                    
+                                    <ul class="survey_form_list">
+                                        <li>
+                                            <ul class="props_item_list">
+                                                <li><button class="props_button">호텔</button></li>
+                                                <li><button class="props_button">골프</button></li>
+                                                <li><button class="props_button">한우</button></li>
+                                                <li><button class="props_button">파인다이닝</button></li>
+                                                <li><button class="props_button">와인 등 주류</button></li>
+                                                <li><button class="props_button">가전</button></li>
+                                                <li><button class="props_button has_br">고급식품<br><span class="props_button_sub">(특산품 등)</span></button></li>
+                                                <li><button class="props_button">건강검진</button></li>
+                                                <li><button class="props_button has_br">뷰티<br><span class="props_button_sub">(에스테틱 바우처 등)</span></button></li>
+                                                <li><button class="props_button">기타</button></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has_ta"><textarea rows="10" cols="10" class="survey_ta" placeholder="의견 :"></textarea></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -198,8 +244,10 @@
                     /* console.log(survey_swiper.realIndex); */
                     if(survey_swiper.realIndex >= 1 && survey_swiper.realIndex < survey_swiper_slide_length - 1){
                         swiper_pagination_layer.classList.add("active");
+                        survey_document_wrap.classList.add("ing");
                         swiper_fraction_current.textContent = survey_swiper.realIndex;
                     }else{
+                        survey_document_wrap.classList.remove("ing");
                         swiper_pagination_layer.classList.remove("active");
                     } 
     

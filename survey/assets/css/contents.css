@@ -58,7 +58,7 @@ color: #454545; font-weight:400;
 .swiper_pagination_layer.active{display:flex;}
 .swiper_pagination_cols{}
 .swiper_fraction_cols{}
-.swiper_fraction_para{font-size:22px;color:#282828;line-height:1;display:flex;align-items: center;}
+.swiper_fraction_para{font-size:22px;color:#383838;line-height:1;display:flex;align-items: center; opacity:.68;}
 .swiper_pagination_layer .swiper-pagination{position:static;}
 .swiper_pagination_layer .swiper-pagination-bullet{opacity:1;width:20px;height:20px; display:inline-block; background:#b3b3b3; margin-right:8px;}
 .swiper_pagination_layer .swiper-pagination-bullet:first-of-type,

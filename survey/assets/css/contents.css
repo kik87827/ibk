@@ -106,5 +106,6 @@ color: #acacac; font-weight:400;
     .gate_logo_row img{max-width:170px;}
     .gate_title_main{padding:102.5px 0 0 64px; font-size:57px; }
     .gate_title_sub{padding:66.5px 0 0 64px; font-size:57px;}
+    .swiper_navigation_layer{width:768px;left:50%;transform: translate(-50%,-50%);}
 }
 /* // survey */

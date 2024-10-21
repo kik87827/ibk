@@ -262,7 +262,8 @@
                         survey_document_wrap.classList.add("ing");
                         swiper_fraction_current.textContent = survey_swiper.realIndex;
                         swiper_navigation_layer.style.display = "block";
-                        if(survey_swiper.realIndex == 1){
+                        swiper_navigation_layer.classList.add("skin2");
+                        if(survey_swiper.realIndex == 0){
                             prev_btn.style.display = "none";
                         }else{
                             prev_btn.style.display = "block";
@@ -271,10 +272,15 @@
                             next_btn.style.display = "none";
                         } */
                     }else{
-                        survey_document_wrap.classList.remove("ing");
+                        swiper_navigation_layer.classList.remove("skin2");
+                        survey_document_wrap.classList.remove("ing","skin2");
                         swiper_pagination_layer.classList.remove("active");
                         
                         swiper_navigation_layer.style.display = "none";
+                        if(survey_swiper.realIndex === 0){
+                            prev_btn.removeAttribute("style");
+                            swiper_navigation_layer.removeAttribute("style");
+                        }
                     } 
     
                     /* if(survey_swiper.realIndex == survey_swiper_slide_length - 1){

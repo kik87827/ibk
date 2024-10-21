@@ -189,6 +189,10 @@
                         </span>
                     </div>
                 </div>
+                <div class="swiper_navigation_layer">
+                    <button class="btn_swiper_nav prev"></button>
+                    <button class="btn_swiper_nav next"></button>
+                </div>
             </div>
         </div>
     </div>
@@ -209,6 +213,9 @@
             const swiper_pagination_layer = document.querySelector(".swiper_pagination_layer");
             const btn_survey_close = document.querySelector(".btn_survey_close");
             const close_trigger = document.querySelectorAll(".survey_swiper_zone .close_trigger");
+            const swiper_navigation_layer = document.querySelector(".survey_swiper_zone .swiper_navigation_layer");
+            let prev_btn = null;
+            let next_btn = null;
             if(!!survey_swiper_container){
             
                 swiper_fraction_length.textContent = survey_swiper_slide_length-2;
@@ -222,9 +229,17 @@
                     },
                     pagination: {
                         el: ".swiper_pagination_layer .swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".btn_swiper_nav.next",
+                        prevEl: ".btn_swiper_nav.prev",
                     },
                     autoHeight : true
                 });
+                
+                prev_btn = document.querySelector(".btn_swiper_nav.prev");
+                next_btn = document.querySelector(".btn_swiper_nav.next");
                 survey_swiper.on("slideChange",()=>{
                     console.log('slideChange');
                     controlFunc();
@@ -246,9 +261,20 @@
                         swiper_pagination_layer.classList.add("active");
                         survey_document_wrap.classList.add("ing");
                         swiper_fraction_current.textContent = survey_swiper.realIndex;
+                        swiper_navigation_layer.style.display = "block";
+                        /* if(survey_swiper.realIndex == 1){
+                            prev_btn.style.display = "none";
+                        }else{
+                            prev_btn.style.display = "block";
+                        } */
+                        /* if(survey_swiper.realIndex == survey_swiper_slide_length - 2){
+                            next_btn.style.display = "none";
+                        } */
                     }else{
                         survey_document_wrap.classList.remove("ing");
                         swiper_pagination_layer.classList.remove("active");
+                        
+                        swiper_navigation_layer.style.display = "none";
                     } 
     
                     /* if(survey_swiper.realIndex == survey_swiper_slide_length - 1){
